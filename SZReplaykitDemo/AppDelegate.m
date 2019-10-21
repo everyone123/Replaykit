@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "EDNSLogManager.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 开始存储宿主app log
+    [[EDNSLogManager sharedInstance] startSaveNSlog];
     return YES;
 }
 

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001EB85A235D98E8008609E2 /* EDNSLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 001EB858235D98E8008609E2 /* EDNSLogManager.m */; };
+		001EB85B235D98E8008609E2 /* EDNSLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 001EB858235D98E8008609E2 /* EDNSLogManager.m */; };
+		001EB85C235D98E8008609E2 /* EDNSLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 001EB858235D98E8008609E2 /* EDNSLogManager.m */; };
+		001EB85F235D9950008609E2 /* EDExtNSLOGManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 001EB85E235D9950008609E2 /* EDExtNSLOGManager.m */; };
+		001EB860235D9950008609E2 /* EDExtNSLOGManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 001EB85E235D9950008609E2 /* EDExtNSLOGManager.m */; };
+		001EB861235D9950008609E2 /* EDExtNSLOGManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 001EB85E235D9950008609E2 /* EDExtNSLOGManager.m */; };
+		001EB869235D99BF008609E2 /* EDAppGroupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 001EB868235D99BF008609E2 /* EDAppGroupManager.m */; };
+		001EB86A235D99BF008609E2 /* EDAppGroupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 001EB868235D99BF008609E2 /* EDAppGroupManager.m */; };
+		001EB86B235D99BF008609E2 /* EDAppGroupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 001EB868235D99BF008609E2 /* EDAppGroupManager.m */; };
 		0058D36B2224D4300021192B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0058D36A2224D4300021192B /* AppDelegate.m */; };
 		0058D36E2224D4300021192B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0058D36D2224D4300021192B /* ViewController.m */; };
 		0058D3712224D4300021192B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0058D36F2224D4300021192B /* Main.storyboard */; };
@@ -15,6 +24,13 @@
 		0058D3792224D4310021192B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0058D3782224D4310021192B /* main.m */; };
 		0058D3832224D4310021192B /* SZReplaykitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0058D3822224D4310021192B /* SZReplaykitDemoTests.m */; };
 		0058D38E2224D4310021192B /* SZReplaykitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0058D38D2224D4310021192B /* SZReplaykitDemoUITests.m */; };
+		0058D3A22224D4750021192B /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0058D3A12224D4750021192B /* ReplayKit.framework */; };
+		0058D3A62224D4750021192B /* SampleHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0058D3A52224D4750021192B /* SampleHandler.m */; };
+		0058D3AD2224D4750021192B /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0058D3A12224D4750021192B /* ReplayKit.framework */; };
+		0058D3AF2224D4750021192B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0058D3AE2224D4750021192B /* UIKit.framework */; };
+		0058D3B32224D4750021192B /* BroadcastSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0058D3B22224D4750021192B /* BroadcastSetupViewController.m */; };
+		0058D3B72224D4750021192B /* SZReplayExtSetupUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0058D3AC2224D4750021192B /* SZReplayExtSetupUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0058D3BA2224D4750021192B /* SZReplayExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0058D39F2224D4750021192B /* SZReplayExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +48,47 @@
 			remoteGlobalIDString = 0058D3652224D4300021192B;
 			remoteInfo = SZReplaykitDemo;
 		};
+		0058D3B52224D4750021192B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0058D35E2224D4300021192B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0058D3AB2224D4750021192B;
+			remoteInfo = SZReplayExtSetupUI;
+		};
+		0058D3B82224D4750021192B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0058D35E2224D4300021192B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0058D39E2224D4750021192B;
+			remoteInfo = SZReplayExt;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0058D3C12224D4750021192B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0058D3BA2224D4750021192B /* SZReplayExt.appex in Embed App Extensions */,
+				0058D3B72224D4750021192B /* SZReplayExtSetupUI.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		000C69242359AF4100D39385 /* SZReplaykitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SZReplaykitDemo.entitlements; sourceTree = "<group>"; };
+		000C69252359AF6B00D39385 /* SZReplayExt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SZReplayExt.entitlements; sourceTree = "<group>"; };
+		000C69262359AF7500D39385 /* SZReplayExtSetupUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SZReplayExtSetupUI.entitlements; sourceTree = "<group>"; };
+		001EB858235D98E8008609E2 /* EDNSLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDNSLogManager.m; sourceTree = "<group>"; };
+		001EB859235D98E8008609E2 /* EDNSLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDNSLogManager.h; sourceTree = "<group>"; };
+		001EB85D235D9950008609E2 /* EDExtNSLOGManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDExtNSLOGManager.h; sourceTree = "<group>"; };
+		001EB85E235D9950008609E2 /* EDExtNSLOGManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDExtNSLOGManager.m; sourceTree = "<group>"; };
+		001EB867235D99BF008609E2 /* EDAppGroupManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDAppGroupManager.h; sourceTree = "<group>"; };
+		001EB868235D99BF008609E2 /* EDAppGroupManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDAppGroupManager.m; sourceTree = "<group>"; };
 		0058D3662224D4300021192B /* SZReplaykitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SZReplaykitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0058D3692224D4300021192B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0058D36A2224D4300021192B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +105,16 @@
 		0058D3892224D4310021192B /* SZReplaykitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SZReplaykitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0058D38D2224D4310021192B /* SZReplaykitDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZReplaykitDemoUITests.m; sourceTree = "<group>"; };
 		0058D38F2224D4310021192B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0058D39F2224D4750021192B /* SZReplayExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SZReplayExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0058D3A12224D4750021192B /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		0058D3A42224D4750021192B /* SampleHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleHandler.h; sourceTree = "<group>"; };
+		0058D3A52224D4750021192B /* SampleHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleHandler.m; sourceTree = "<group>"; };
+		0058D3A72224D4750021192B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0058D3AC2224D4750021192B /* SZReplayExtSetupUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SZReplayExtSetupUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0058D3AE2224D4750021192B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0058D3B12224D4750021192B /* BroadcastSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BroadcastSetupViewController.h; sourceTree = "<group>"; };
+		0058D3B22224D4750021192B /* BroadcastSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BroadcastSetupViewController.m; sourceTree = "<group>"; };
+		0058D3B42224D4750021192B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +139,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0058D39C2224D4750021192B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0058D3A22224D4750021192B /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0058D3A92224D4750021192B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0058D3AD2224D4750021192B /* ReplayKit.framework in Frameworks */,
+				0058D3AF2224D4750021192B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +165,9 @@
 				0058D3682224D4300021192B /* SZReplaykitDemo */,
 				0058D3812224D4310021192B /* SZReplaykitDemoTests */,
 				0058D38C2224D4310021192B /* SZReplaykitDemoUITests */,
+				0058D3A32224D4750021192B /* SZReplayExt */,
+				0058D3B02224D4750021192B /* SZReplayExtSetupUI */,
+				0058D3A02224D4750021192B /* Frameworks */,
 				0058D3672224D4300021192B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +178,8 @@
 				0058D3662224D4300021192B /* SZReplaykitDemo.app */,
 				0058D37E2224D4310021192B /* SZReplaykitDemoTests.xctest */,
 				0058D3892224D4310021192B /* SZReplaykitDemoUITests.xctest */,
+				0058D39F2224D4750021192B /* SZReplayExt.appex */,
+				0058D3AC2224D4750021192B /* SZReplayExtSetupUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,10 +187,15 @@
 		0058D3682224D4300021192B /* SZReplaykitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				000C69242359AF4100D39385 /* SZReplaykitDemo.entitlements */,
 				0058D3692224D4300021192B /* AppDelegate.h */,
 				0058D36A2224D4300021192B /* AppDelegate.m */,
 				0058D36C2224D4300021192B /* ViewController.h */,
 				0058D36D2224D4300021192B /* ViewController.m */,
+				001EB867235D99BF008609E2 /* EDAppGroupManager.h */,
+				001EB868235D99BF008609E2 /* EDAppGroupManager.m */,
+				001EB859235D98E8008609E2 /* EDNSLogManager.h */,
+				001EB858235D98E8008609E2 /* EDNSLogManager.m */,
 				0058D36F2224D4300021192B /* Main.storyboard */,
 				0058D3722224D4310021192B /* Assets.xcassets */,
 				0058D3742224D4310021192B /* LaunchScreen.storyboard */,
@@ -132,6 +223,39 @@
 			path = SZReplaykitDemoUITests;
 			sourceTree = "<group>";
 		};
+		0058D3A02224D4750021192B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0058D3A12224D4750021192B /* ReplayKit.framework */,
+				0058D3AE2224D4750021192B /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0058D3A32224D4750021192B /* SZReplayExt */ = {
+			isa = PBXGroup;
+			children = (
+				000C69252359AF6B00D39385 /* SZReplayExt.entitlements */,
+				0058D3A42224D4750021192B /* SampleHandler.h */,
+				0058D3A52224D4750021192B /* SampleHandler.m */,
+				001EB85D235D9950008609E2 /* EDExtNSLOGManager.h */,
+				001EB85E235D9950008609E2 /* EDExtNSLOGManager.m */,
+				0058D3A72224D4750021192B /* Info.plist */,
+			);
+			path = SZReplayExt;
+			sourceTree = "<group>";
+		};
+		0058D3B02224D4750021192B /* SZReplayExtSetupUI */ = {
+			isa = PBXGroup;
+			children = (
+				000C69262359AF7500D39385 /* SZReplayExtSetupUI.entitlements */,
+				0058D3B12224D4750021192B /* BroadcastSetupViewController.h */,
+				0058D3B22224D4750021192B /* BroadcastSetupViewController.m */,
+				0058D3B42224D4750021192B /* Info.plist */,
+			);
+			path = SZReplayExtSetupUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,10 +266,13 @@
 				0058D3622224D4300021192B /* Sources */,
 				0058D3632224D4300021192B /* Frameworks */,
 				0058D3642224D4300021192B /* Resources */,
+				0058D3C12224D4750021192B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0058D3B62224D4750021192B /* PBXTargetDependency */,
+				0058D3B92224D4750021192B /* PBXTargetDependency */,
 			);
 			name = SZReplaykitDemo;
 			productName = SZReplaykitDemo;
@@ -188,6 +315,40 @@
 			productReference = 0058D3892224D4310021192B /* SZReplaykitDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0058D39E2224D4750021192B /* SZReplayExt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0058D3BE2224D4750021192B /* Build configuration list for PBXNativeTarget "SZReplayExt" */;
+			buildPhases = (
+				0058D39B2224D4750021192B /* Sources */,
+				0058D39C2224D4750021192B /* Frameworks */,
+				0058D39D2224D4750021192B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SZReplayExt;
+			productName = SZReplayExt;
+			productReference = 0058D39F2224D4750021192B /* SZReplayExt.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		0058D3AB2224D4750021192B /* SZReplayExtSetupUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0058D3BB2224D4750021192B /* Build configuration list for PBXNativeTarget "SZReplayExtSetupUI" */;
+			buildPhases = (
+				0058D3A82224D4750021192B /* Sources */,
+				0058D3A92224D4750021192B /* Frameworks */,
+				0058D3AA2224D4750021192B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SZReplayExtSetupUI;
+			productName = SZReplayExtSetupUI;
+			productReference = 0058D3AC2224D4750021192B /* SZReplayExtSetupUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,6 +369,12 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 0058D3652224D4300021192B;
 					};
+					0058D39E2224D4750021192B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					0058D3AB2224D4750021192B = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 0058D3612224D4300021192B /* Build configuration list for PBXProject "SZReplaykitDemo" */;
@@ -226,6 +393,8 @@
 				0058D3652224D4300021192B /* SZReplaykitDemo */,
 				0058D37D2224D4310021192B /* SZReplaykitDemoTests */,
 				0058D3882224D4310021192B /* SZReplaykitDemoUITests */,
+				0058D39E2224D4750021192B /* SZReplayExt */,
+				0058D3AB2224D4750021192B /* SZReplayExtSetupUI */,
 			);
 		};
 /* End PBXProject section */
@@ -255,6 +424,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0058D39D2224D4750021192B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0058D3AA2224D4750021192B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -262,8 +445,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001EB85F235D9950008609E2 /* EDExtNSLOGManager.m in Sources */,
+				001EB85A235D98E8008609E2 /* EDNSLogManager.m in Sources */,
 				0058D36E2224D4300021192B /* ViewController.m in Sources */,
 				0058D3792224D4310021192B /* main.m in Sources */,
+				001EB869235D99BF008609E2 /* EDAppGroupManager.m in Sources */,
 				0058D36B2224D4300021192B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +470,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0058D39B2224D4750021192B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001EB86A235D99BF008609E2 /* EDAppGroupManager.m in Sources */,
+				0058D3A62224D4750021192B /* SampleHandler.m in Sources */,
+				001EB85B235D98E8008609E2 /* EDNSLogManager.m in Sources */,
+				001EB860235D9950008609E2 /* EDExtNSLOGManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0058D3A82224D4750021192B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001EB86B235D99BF008609E2 /* EDAppGroupManager.m in Sources */,
+				0058D3B32224D4750021192B /* BroadcastSetupViewController.m in Sources */,
+				001EB85C235D98E8008609E2 /* EDNSLogManager.m in Sources */,
+				001EB861235D9950008609E2 /* EDExtNSLOGManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,6 +504,16 @@
 			isa = PBXTargetDependency;
 			target = 0058D3652224D4300021192B /* SZReplaykitDemo */;
 			targetProxy = 0058D38A2224D4310021192B /* PBXContainerItemProxy */;
+		};
+		0058D3B62224D4750021192B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0058D3AB2224D4750021192B /* SZReplayExtSetupUI */;
+			targetProxy = 0058D3B52224D4750021192B /* PBXContainerItemProxy */;
+		};
+		0058D3B92224D4750021192B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0058D39E2224D4750021192B /* SZReplayExt */;
+			targetProxy = 0058D3B82224D4750021192B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -370,7 +588,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -423,7 +641,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -435,6 +653,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SZReplaykitDemo/SZReplaykitDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B4BRG88LS5;
 				INFOPLIST_FILE = SZReplaykitDemo/Info.plist;
@@ -452,6 +671,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SZReplaykitDemo/SZReplaykitDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B4BRG88LS5;
 				INFOPLIST_FILE = SZReplaykitDemo/Info.plist;
@@ -539,6 +759,82 @@
 			};
 			name = Release;
 		};
+		0058D3BC2224D4750021192B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SZReplayExtSetupUI/SZReplayExtSetupUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4BRG88LS5;
+				INFOPLIST_FILE = SZReplayExtSetupUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shi.carbit.com.cn.SZReplaykitDemo.SZReplayExtSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0058D3BD2224D4750021192B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SZReplayExtSetupUI/SZReplayExtSetupUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4BRG88LS5;
+				INFOPLIST_FILE = SZReplayExtSetupUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shi.carbit.com.cn.SZReplaykitDemo.SZReplayExtSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0058D3BF2224D4750021192B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SZReplayExt/SZReplayExt.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4BRG88LS5;
+				INFOPLIST_FILE = SZReplayExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shi.carbit.com.cn.SZReplaykitDemo.SZReplayExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0058D3C02224D4750021192B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SZReplayExt/SZReplayExt.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4BRG88LS5;
+				INFOPLIST_FILE = SZReplayExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shi.carbit.com.cn.SZReplaykitDemo.SZReplayExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -574,6 +870,24 @@
 			buildConfigurations = (
 				0058D3992224D4310021192B /* Debug */,
 				0058D39A2224D4310021192B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0058D3BB2224D4750021192B /* Build configuration list for PBXNativeTarget "SZReplayExtSetupUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0058D3BC2224D4750021192B /* Debug */,
+				0058D3BD2224D4750021192B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0058D3BE2224D4750021192B /* Build configuration list for PBXNativeTarget "SZReplayExt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0058D3BF2224D4750021192B /* Debug */,
+				0058D3C02224D4750021192B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

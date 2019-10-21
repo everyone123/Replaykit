@@ -29,9 +29,14 @@ static float const EDSingleFileLimit = 100 * 1024 *1024; //100M
 @end
 
 @implementation EDNSLogManager
-DEF_SINGLETON(EDNSLogManager);
-
-
+static EDNSLogManager *manager = nil;
++ (instancetype)sharedInstance{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [[EDNSLogManager alloc] init];
+    });
+    return manager;
+}
 
 - (instancetype)init {
     self = [super init];
@@ -68,19 +73,15 @@ DEF_SINGLETON(EDNSLogManager);
         // 关闭日志
         NSLog(@"存储空间不足，关闭日志存储");
         [self closeSaveNSLog];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [EDNewAlertView displayAlertWithTitle:@"提示" message:@"存储空间不足，已关闭日志存储" leftButtonTitle:nil leftButtonAction:nil rightButtonTitle:@"确定" rightButtonAction:^{
-            }];
-        });
     }
     
     // 打印app及系统信息
     [self printAppAndSystemInfo];
     
     
-    weakify_self
+    __weak typeof(self) weakSelf = self;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:30*60 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        strongify_self
+        __strong typeof(self) self = weakSelf;
         // 如果当前文件大小 大于100M 另起文件
         long long fileSize = [self getFileSizeForPath:self.currentLogFilePath];
         if (fileSize > EDSingleFileLimit) {
@@ -261,77 +262,5 @@ DEF_SINGLETON(EDNSLogManager);
     NSLog(@"当前存储空间:%lld",freeSpace);
     return freeSpace;
 }
-
-
-#pragma mark - - 存储 其他 app 信息
-// 存储deviceToken
-- (void)storeDeviceToken:(NSString *)token{
-    
-    NSString *documentDirectory = [self getLogDirectory];
-    
-    NSString *uuidLog = [NSString stringWithString:token];
-    NSString *fileName = @"DeviceToken.txt";
-    
-    NSString *logFilePath = [documentDirectory stringByAppendingPathComponent:fileName];
-    // 先删除已经存在的文件
-    NSFileManager *defaultManager = [NSFileManager defaultManager];
-    [defaultManager removeItemAtPath:logFilePath error:nil];
-    
-    [uuidLog writeToFile:logFilePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
-}
-
-
-- (void)storeUUID {
-    NSString *documentDirectory = [self getLogDirectory];
-    
-    NSString *uuidLog = [DeviceInfo new].device_id;
-    NSString *fileName = @"UUID.txt";
-    
-    NSString *logFilePath = [documentDirectory stringByAppendingPathComponent:fileName];
-    // 先删除已经存在的文件
-    NSFileManager *defaultManager = [NSFileManager defaultManager];
-    [defaultManager removeItemAtPath:logFilePath error:nil];
-    
-    [uuidLog writeToFile:logFilePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
-}
-
-
-- (void)storeExceptionInfo:(NSString *)exceptionInfo {
-    
-    NSString *documentDirectory = [self getLogDirectory];
-    
-    NSDateFormatter *format=[[NSDateFormatter alloc] init];
-    format.timeZone=[NSTimeZone localTimeZone];
-    format.dateFormat=@"yyyy.MM.dd HH.mm.ss";
-    NSString *time=[format stringFromDate:[NSDate date]];
-    NSString *fileName = [NSString stringWithFormat:@"CRASH LOG %@.txt", time];
-    
-    NSString *logFilePath = [documentDirectory stringByAppendingPathComponent:fileName];
-    // 先删除已经存在的文件
-    NSFileManager *defaultManager = [NSFileManager defaultManager];
-    [defaultManager removeItemAtPath:logFilePath error:nil];
-    
-    [exceptionInfo writeToFile:logFilePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    
-}
-
-
-
-
-
-
-
-
-//// 获取所有日志的DocumentPath
-//- (NSArray <NSString *> *)getAllLogDocumentPath {
-//    NSString *DocumentsPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-//    NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:DocumentsPath];
-//    for (NSString *fileName in enumerator) {
-//        [[NSFileManager defaultManager] removeItemAtPath:[DocumentsPath stringByAppendingPathComponent:fileName] error:nil];
-//    }
-//
-//
-//}
-
 
 @end

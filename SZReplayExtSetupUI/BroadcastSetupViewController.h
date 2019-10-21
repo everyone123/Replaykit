@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <ReplayKit/ReplayKit.h>
+#import "EDAppGroupManager.h"
 
 @interface BroadcastSetupViewController : UIViewController
 

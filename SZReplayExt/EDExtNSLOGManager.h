@@ -11,6 +11,17 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EDExtNSLOGManager : NSObject
+// 初始化 manager
++ (instancetype)sharedInstance;
+
+// 开始存储NSLOG
+- (void)startSaveNSlog;
+
+// 获取所有日志文件Path
++ (NSArray *)getAllLogFilePath;
+
+// 删除所有日志文件
++ (void)deletAllLog;
 
 @end
 

@@ -7,20 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EDNSLogManager : NSObject
-AS_SINGLETON(EDNSLogManager);
+// 初始化 manager
++ (instancetype)sharedInstance;
 
 // 开始存储NSLOG
 - (void)startSaveNSlog;
-
-// 存储DeviceToken
-- (void)storeDeviceToken:(NSString *)token;
-
-// 存储UUID
-- (void)storeUUID;
 
 // 获取所有日志文件Path
 - (NSArray *)getAllLogFilePath;
@@ -28,8 +23,6 @@ AS_SINGLETON(EDNSLogManager);
 // 删除所有日志文件
 - (void)deletAllLog;
 
-// 存储崩溃信息
-- (void)storeExceptionInfo:(NSString *)exceptionInfo;
 
 @end
 
